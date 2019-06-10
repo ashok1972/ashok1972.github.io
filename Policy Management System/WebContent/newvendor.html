@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="./VendorSaveServlet" method="post">
+First Name <input type="text" name="First_Name"><br><br>
+LAST NAME <input type="text" name="Last_Name" maxlength="50"/>
+(max 50 characters a-z and A-Z)<br><br>
+
+<!----- DOB ---------------------------------------------------------->
+DOB
+<input type="text" name="DOB" maxlength="10"/>
+(max 10 characters a-z and A-Z dd-MM-yyyy)<br><br>
+
+
+GENDER <select  name="Gender">
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+</select> <br><br>
+
+CONTACT NUMBER
+<input type="text" name="Contact_Number" maxlength="10"/>
+(max 10 number 0-9 and 0-9)<br><br>
+
+ADDRESS
+<input type="text" name="Address" maxlength="60"/><br><br>
+
+EMAIL ID
+<input type="text" name="Email_id" maxlength="15"/><br><br>
+
+QUALIFICATION
+<input type="text" name="Qualification" maxlength="10"/><br><br>
+
+SALARY PER MONTH
+<input type="text" name="Salary_Per_Month" maxlength="10"/><br><br>
+
+PAN NO
+<input type="text" name="PAN_No" maxlength="10"/><br><br>
+
+EMPLOYER TYPE
+<input type="text" name="Employer_Type" maxlength="10" required/><br><br>
+
+EMPLOYER
+<input type="text" name="Employer" maxlength="10" required/><br><br>
+
+HINT QUESTION
+<input type="text" name="Hint-Question" maxlength="50"/><br><br>
+
+HINT ANSWER<input type="text" name="Hint-Answer" maxlength="50"/><br><br>
+
+PASSWORD
+ <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+
+ RE-ENTER PASSWORD
+  <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+
+ <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+<input type="submit" value="Submit">
+
+</form>
+</body>
+</html>

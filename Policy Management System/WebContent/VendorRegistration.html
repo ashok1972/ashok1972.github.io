@@ -1,0 +1,188 @@
+
+<html>
+<head>
+<script type="text/javascript">
+function myfun(){
+var v=document.getElementById("Salary_Per_Month").value;
+if(isNaN(v))
+	{
+	alert("I am an alert box!");
+	}
+}
+</script>
+<style>
+h3{
+  font-family: Calibri; 
+  font-size: 25pt;         
+  font-style: normal; 
+  font-weight: bold; 
+  color:Green;
+  text-align: center; 
+  text-decoration: underline
+}
+
+table{
+  font-family: Calibri; 
+  color:white; 
+  font-size: 11pt; 
+  font-style: normal;
+  font-weight: bold;
+  text-align:; 
+  background-color:black; 
+  border-collapse: collapse; 
+  border: 2px solid navy
+}
+table.inner{
+  border: 0px
+}
+</style>
+<title>ACCOUNT PAGE</title>
+
+</head>
+ 
+ <body style="background-color:white;">
+
+<h3>CREATE AN ACCOUNT</h3>
+
+ 
+<table align="center" cellpadding = "10">
+<form action="VendorSaveServlet" method="post">
+
+<!----- First Name ---------------------------------------------------------->
+
+<tr>
+<td>FIRST NAME</td>
+<td><input type="text" name="First_Name" maxlength="50"/ name="Enter the name" required>
+(max 50 characters a-z and A-Z)
+</td>
+</tr>
+ 
+<!----- Last Name ---------------------------------------------------------->
+<tr>
+<td>LAST NAME</td>
+<td><input type="text" name="Last_Name" maxlength="50"/>
+(max 50 characters a-z and A-Z)
+</td>
+</tr>
+<tr>
+<!----- DOB ---------------------------------------------------------->
+<tr>
+<td>DOB</td>
+<td><input type="text" name="DOB" maxlength="10"/>
+(max 10 characters a-z and A-Z)
+</td>
+</tr>
+<tr>
+<!----- Gender ---------------------------------------------------------->
+
+<td>GENDER</td>
+<td> 
+<select  name="Gender">
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+</select>
+</td>
+
+<tr>
+<!-----Contact Number ---------------------------------------------------------->
+<tr>
+<td>CONTACT NUMBER</td>
+<td><input type="text" name="Contact_Number" maxlength="10"/>
+(max 10 number 0-9 and 0-9)
+</td>
+</tr>
+<tr>
+<!----- ADDRESS ---------------------------------------------------------->
+<tr>
+<td>ADDRESS</td>
+<td><input type="text" name="Address" maxlength="60"/>
+</td>
+</tr>
+<tr>
+<!----- EMAIL ID ---------------------------------------------------------->
+<tr>
+<td>EMAIL ID</td>
+<td><input type="text" name="Email_id" maxlength="15"/>
+</td>
+</tr>
+<tr>
+<!----- Qualification ---------------------------------------------------------->
+<tr>
+<td>QUALIFICATION</td>
+<td><input type="text" name="Qualification" maxlength="10"/>
+</td>
+</tr>
+<tr>
+<!----- Salary per Month ---------------------------------------------------------->
+<tr>
+<td>SALARY PER MONTH</td>
+<td><input type="text" name="Salary_Per_Month" maxlength="10"/>
+</td>
+</tr>
+<tr>
+<!----- PAN No ---------------------------------------------------------->
+<tr>
+<td>PAN NO</td>
+<td><input type="text" name="PAN_No" maxlength="10"/>
+</td>
+</tr>
+<tr>
+<!----- Employer type ---------------------------------------------------------->
+<tr>
+<td>EMPLOYER TYPE</td>
+<td><input type="text" name="Employer_Type" maxlength="10"/>
+</td>
+</tr>
+<tr>
+<!----- Employer ---------------------------------------------------------->
+<tr>
+<td>EMPLOYER</td>
+<td><input type="text" name="Employer" maxlength="10" required="required"/>
+</td>
+</tr>
+<tr>
+<!----- Hint Question ---------------------------------------------------------->
+<tr>
+<td>HINT QUESTION</td>
+<td><input type="text" name="Hint-Question" maxlength="50"/>
+</td>
+</tr>
+<tr>
+<!----- Hint Answer ---------------------------------------------------------->
+<tr>
+<td>HINT ANSWER</td>
+<td><input type="text" name="Hint-Answer" maxlength="50"/>
+</td>
+</tr>
+<tr>
+ <td>PASSWORD</td>
+    <td><input type="password" placeholder="Enter Password" name="psw" required="required">
+</td>
+<tr/>
+<tr>
+ <td>RE-ENTER PASSWORD</td>
+    <td><input type="password" placeholder="Enter Password" name="psw" required>
+</td>
+<tr/>
+<td>
+ <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+</td>
+ <tr>
+<td colspan="2" align="center">
+<!-- <input type="submit" value="Submit" a href="C:\Users\764991\Desktop\Profile\success.html" onclick="myfun()">
+ -->
+ <button type="button" onclick="myfun()">Submit</button>
+ 
+ <input type="reset" value="Reset">
+</td>
+</tr>
+</font>
+ 
+</form>
+ 
+</body>
+</html>

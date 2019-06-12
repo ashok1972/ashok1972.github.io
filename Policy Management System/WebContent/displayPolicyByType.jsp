@@ -37,42 +37,39 @@ table.inner{
 <title>Insert title here</title>
 </head>
 <body>
-  <%
-  List<PolicyEntry> li=new PolicyBo().getAllPolicies();
-  Set<String> setpo=new TreeSet<String>();
-  for(PolicyEntry pe:li){
-	  setpo.add(pe.getPolicyType());
-  }
   
-  
-  %>
 <center><h1>Policy Details</h1></center>
-<form action="displayPolicyByType.jsp">
-Select the policy Type : <select name="policy_type">
-<%for(String s:setpo) { %>
-<option value="<%=s%>"><%=s%></option>
-<% } %>
-</select>
-<input type="submit" value="search">
-</form>
-
-<form action="displayPolicyById.jsp">
-Policy id: <input type="text" name="pid">
-<input type="submit" value="Search Id">
-</form>
-
-<form action="displayPolicyByName.jsp">
-Policy name: <input type="text" name="pon">
-<input type="submit" value="Search Name">
-</form>
-<form action="displayPolicyByDuration.jsp">
-Duration of years: <input type="text" name="no">
-<input type="submit" value="Search Years">
-</form>
-<form action="displayPolicyByCompany.jsp">
-Company name: <input type="text" name="con">
-<input type="submit" value="Search company">
-</form>
+<table>
+<tr>
+    <th>Policy Id </th>
+    <th>Policy Name </th>
+    <th>Policy type </th> 
+    <th>Duration of years </th>
+      <th>Company </th>
+        <th>Initial Deposit </th>
+          <th>User type </th>
+            <th>Term amount </th>
+              <th>Interest </th>
+</tr>
+<%
+String value=request.getParameter("policy_type");
+PolicyBo pb=new PolicyBo();
+ArrayList<PolicyEntry> al=pb.viewAllPolicies();
+ for(PolicyEntry u1:al) 
+ {
+	 if(value.equals(u1.getPolicyType())){
+	 %><tr>
+    <td><%=u1.getPolicyId() %></td>
+    <td><%=u1.getPolicyName()  %></td>
+    <td><%=u1.getPolicyType() %></td>
+<td><%=u1.getDurationOfYears() %></td>
+    <td><%=u1.getCompany() %></td>
+    <td><%=u1.getIntialDeposit() %></td>
+    <td><%=u1.getUserType() %></td>
+    <td><%=u1.getTermAmount() %></td>
+    <td><%=u1.getInterest() %></td></tr>
+  <% }}%> 
+</table>
 </body>
 </html>
 

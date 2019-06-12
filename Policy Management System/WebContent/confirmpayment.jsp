@@ -7,9 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div>
-<div></div>
-Welcome <%=request.getAttribute("name") %> | <a href="paymentPolicy.jsp">View Policy Details</a>
-</div>
+You have sucessfully paid <%=request.getParameter("id") %><br><br>
+<a href="">Home</a>
 </body>
 </html>

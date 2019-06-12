@@ -1,44 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
-    
-    <%@page import="java.util.*,com.cts.policymanagementsystem.businessclass.*,com.cts.policymanagementsystem.controller.*,com.cts.policymanagementsystem.model.*,java.io.*"%> 
+      <%@page import="java.util.*,com.cts.policymanagementsystem.businessclass.*,com.cts.policymanagementsystem.controller.*,com.cts.policymanagementsystem.model.*,java.io.*"%> 
   
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<style>
-h3{
-  font-family: Calibri; 
-  font-size: 25pt;         
-  font-style: normal; 
-  font-weight: bold; 
-  color:Green;
-  text-align: center; 
-  text-decoration: underline
-}
-
-table{
-  font-family: Calibri; 
-  color:black; 
-  font-size: 11pt; 
-  font-style: normal;
-  font-weight: bold;
-  text-align: ; 
-  background-color:white; 
-  border-collapse: collapse; 
-  border: 4px solid navy
-}
-table.inner{
-  border: 0px
-}
-</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-  
-<center><h1>Policy Details</h1></center>
 <table>
 <tr>
     <th>Policy Id </th>
@@ -50,8 +20,8 @@ table.inner{
           <th>User type </th>
             <th>Term amount </th>
               <th>Interest </th>
-              <th>Edit </th>
-              <th>Delete </th>
+              <th>Payment </th>
+              
 </tr>
 <%
 PolicyBo pb=new PolicyBo();
@@ -68,13 +38,10 @@ ArrayList<PolicyEntry> al=pb.viewAllPolicies();
     <td><%=u1.getUserType() %></td>
     <td><%=u1.getTermAmount() %></td>
     <td><%=u1.getInterest() %></td></tr>
-    <td><a href="editpolicy.jsp?id=<%=u1.getPolicyId() %>">Update</a></td></tr>
-    <td><a href="">Delete</a></td></tr>
+    <td><a href="confirmpayment.jsp?id=<%=u1.getTermAmount() %>">Pay</a></td></tr>
+  
   <% }%> 
 </table>
+
 </body>
 </html>
-
-
-
-

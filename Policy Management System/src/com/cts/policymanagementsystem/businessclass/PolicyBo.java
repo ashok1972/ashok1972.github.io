@@ -58,5 +58,18 @@ public class PolicyBo {
 			return li;
 			  
 		  }
+		  public int updatePolicy(PolicyEntry pe) throws Exception {
+			  int i=0;
+			  
+			  Connection con=(Connection) MyConnection.getConnection();
+			PreparedStatement ps=con.prepareStatement("update policy_entry set Policy=?, Policy_type=?,Duration_of_Years=?,Term_Amount=? where Policy_Id=?");
+			  ps.setString(1, pe.getPolicyName());
+			  ps.setString(2, pe.getPolicyType());
+			  ps.setString(3, pe.getDurationOfYears());
+			  ps.setString(4, pe.getTermAmount());
+			  ps.setString(5, pe.getPolicyId());
+			  i=ps.executeUpdate();
+			  return i;
+		  }
 	
 }
